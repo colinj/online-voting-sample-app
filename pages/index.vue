@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <div>
+  <div class="section">
+    <div class="container">
       <logo />
       <h1 class="title">
         online-voting
@@ -38,12 +38,13 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 /* Sample `apply` at-rules with Tailwind CSS
 .container {
   @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
+/*
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -74,4 +75,5 @@ export default {
 .links {
   padding-top: 15px;
 }
+*/
 </style>

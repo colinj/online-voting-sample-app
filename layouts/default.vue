@@ -1,55 +1,57 @@
 <template>
   <div>
-    <nuxt />
+    <header class="section section--min">
+      <div class="container py-4">
+        <h1 class="h1">Online Voting</h1>
+      </div>
+    </header>
+    <div class="section section--min bg-blue-300">
+      <div class="container py-4 flex justify-between">
+        <span>Company Name</span>
+        <span>Annual General Meeting</span>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="flex-layout">
+          <main class="flex-item">
+            <nuxt />
+          </main>
+          <aside class="flex-item">
+            <meeting-details />
+          </aside>
+        </div>
+      </div>
+    </div>
+    <div class="section section--min bg-blue-300">
+      <div class="container py-4 flex justify-between">
+        <span>
+          © MyCompany Pty Ltd | ABN 123 123 123 |
+          <a href="">Terms of Use</a> |
+          <a href="">Privacy Policy</a>
+        </span>
+        <span>Contact Us</span>
+      </div>
+    </div>
   </div>
 </template>
 
-<style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
+<script>
+import MeetingDetails from '@/components/MeetingDetails'
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
+export default {
+  components: {
+    MeetingDetails
+  }
 }
+</script>
+<style lang="scss" scoped>
+aside {
+  flex-basis: 100%;
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+  @screen md {
+    flex-basis: 30%;
+    max-width: 30%;
+  }
 }
 </style>

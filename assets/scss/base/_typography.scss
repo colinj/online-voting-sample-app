@@ -1,0 +1,60 @@
+
+.h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.h5 {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.h6 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+// ul, ol {
+//   margin-top: $margin-gap;
+//   padding-left: 2.5rem;
+// }
+$margin-gap: 1.5rem;
+
+li + li {
+  margin-top: $margin-gap / 2;
+}
+
+p {
+  margin-top: $margin-gap;
+
+  &:first-child {
+      margin-top: 0;
+  }
+}
+
+
+// a {
+//   background-color: transparent;
+//   color: $color-link;
+//   -webkit-text-decoration-skip: objects; // 2.
+
+//   &:hover,
+//   &:focus {
+//     color: darken($color-link, 10);
+//   }
+// }
