@@ -33,14 +33,17 @@
         <span>Contact Us</span>
       </div>
     </footer>
+    <svg-sprites />
   </div>
 </template>
 
 <script>
+import SvgSprites from '@/components/SvgSprites'
 import MeetingDetails from '@/components/MeetingDetails'
 
 export default {
   components: {
+    SvgSprites,
     MeetingDetails
   }
 }
