@@ -24,7 +24,7 @@
     </p>
     <div class="p-6 flex justify-center">
       <a class="btn" href="">Cancel</a>
-      <a class="btn" href="">Next</a>
+      <nuxt-link class="btn" to="/proxy">Next</nuxt-link>
     </div>
   </div>
 </template>

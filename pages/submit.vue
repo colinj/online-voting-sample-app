@@ -50,8 +50,8 @@
     </p>
 
     <div class="p-6 flex justify-center">
-      <a class="btn" href="">Previous</a>
-      <a class="btn" href="">Submit</a>
+      <nuxt-link class="btn" to="/vote">Previous</nuxt-link>
+      <nuxt-link class="btn" to="/confirmation">Submit</nuxt-link>
     </div>
   </div>
 </template>

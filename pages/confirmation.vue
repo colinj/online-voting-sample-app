@@ -68,7 +68,7 @@
     </div>
 
     <div class="p-6 flex justify-center">
-      <a class="btn" href="">Close</a>
+      <nuxt-link class="btn" to="/">Close</nuxt-link>
     </div>
   </div>
 </template>
