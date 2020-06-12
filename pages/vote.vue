@@ -1,5 +1,5 @@
 <template>
-  <div class="containe">
+  <div>
     <h1 class="h1">Voting Directions</h1>
     <p>
       Based on your current holdings as of today, the total number of shares you can use in voting for each resolution
@@ -102,11 +102,11 @@ export default {
   }
 
   .voting-card {
+    padding: 0 1rem;
+
     .flex-layout {
-      display: flex;
       align-items: center;
       margin-bottom: 0rem;
-      width: 100%;
 
       &:nth-child(odd) {
         @apply bg-blue-200;
@@ -117,8 +117,8 @@ export default {
       }
     }
     .flex-item {
-      flex-basis: 3.5rem;
-      max-width: 3.5rem;
+      flex-basis: 5rem;
+      max-width: 5rem;
       padding: .5rem 1rem;
       text-align: center;
     }
