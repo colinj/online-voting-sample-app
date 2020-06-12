@@ -115,7 +115,12 @@ export default {
       &:nth-child(even) {
         @apply bg-white;
       }
+
+      &:first-child {
+        @apply bg-blue-400;
+      }
     }
+
     .flex-item {
       flex-basis: 5rem;
       max-width: 5rem;
