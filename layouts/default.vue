@@ -11,19 +11,19 @@
         <span>Annual General Meeting</span>
       </div>
     </div>
-    <div class="section">
+    <main class="section">
       <div class="container">
         <div class="flex-layout">
-          <main class="flex-item">
+          <div class="flex-item">
             <nuxt />
-          </main>
+          </div>
           <aside class="flex-item">
             <meeting-details />
           </aside>
         </div>
       </div>
-    </div>
-    <div class="section section--min bg-blue-300">
+    </main>
+    <footer class="section section--min bg-blue-300">
       <div class="container py-4 flex justify-between">
         <span>
           © MyCompany Pty Ltd | ABN 123 123 123 |
@@ -32,7 +32,7 @@
         </span>
         <span>Contact Us</span>
       </div>
-    </div>
+    </footer>
   </div>
 </template>
 
@@ -46,6 +46,10 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+main {
+  min-height: calc(100vh - 12rem);
+}
+
 aside {
   flex-basis: 100%;
 
