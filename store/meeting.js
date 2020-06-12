@@ -43,17 +43,3 @@ export const getters = {
     return state.resolutions
   }
 }
-
-// export const mutations = {
-//   increment (state) {
-//     state.counter++
-//   }
-// }
-
-export default {
-  namespaced: true,
-  state,
-  getters,
-  // actions,
-  // mutations
-}
