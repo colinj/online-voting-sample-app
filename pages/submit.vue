@@ -63,25 +63,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.footnote {
-  &::before {
-    content: "*";
-    position: absolute;
-    left: 0;
-  }
-}
 
-.btn {
-  display: inline-block;
-  min-width: 10rem;
-  @apply py-2;
-  @apply px-8;
-  @apply bg-blue-500;
-  @apply rounded-md;
-  text-align: center;
-
-  + .btn {
-    margin-left: 1.5rem;
-  }
-}
 </style>

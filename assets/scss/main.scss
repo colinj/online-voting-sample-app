@@ -3,7 +3,9 @@
 @import 'tailwindcss/components';
 
 @import "./base/typography";
-@import "./layout/_layout";
+@import "./layout/layout";
+
+@import './components/_button';
 
 /* purgecss end ignore */
 @import 'tailwindcss/utilities';

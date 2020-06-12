@@ -1,0 +1,23 @@
+.btn {
+  display: inline-block;
+  min-width: 10rem;
+  @apply py-2;
+  @apply px-8;
+  @apply bg-blue-400;
+  @apply text-white;
+  @apply rounded-md;
+  text-align: center;
+
+
+  &:hover {
+    @apply bg-blue-500;
+  }
+
+  &:active {
+    @apply bg-blue-700;
+  }
+
+  + .btn {
+    margin-left: 1.5rem;
+  }
+}

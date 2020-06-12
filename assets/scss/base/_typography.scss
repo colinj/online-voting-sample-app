@@ -47,6 +47,13 @@ p {
   }
 }
 
+.footnote {
+  &::before {
+    content: "*";
+    position: absolute;
+    left: 0;
+  }
+}
 
 // a {
 //   background-color: transparent;

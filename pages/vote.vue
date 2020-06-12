@@ -89,64 +89,41 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .footnote {
-    &::before {
-      content: "*";
-      position: absolute;
-      left: 0;
+.radio {
+  display: block;
+}
+
+.voting-card {
+  padding: 0 1rem;
+
+  .flex-layout {
+    align-items: center;
+    margin-bottom: 0rem;
+
+    &:nth-child(odd) {
+      @apply bg-blue-200;
+    }
+
+    &:nth-child(even) {
+      @apply bg-white;
+    }
+
+    &:first-child {
+      @apply bg-blue-400;
     }
   }
 
-  .radio {
-    display: block;
-  }
-
-  .voting-card {
-    padding: 0 1rem;
-
-    .flex-layout {
-      align-items: center;
-      margin-bottom: 0rem;
-
-      &:nth-child(odd) {
-        @apply bg-blue-200;
-      }
-
-      &:nth-child(even) {
-        @apply bg-white;
-      }
-
-      &:first-child {
-        @apply bg-blue-400;
-      }
-    }
-
-    .flex-item {
-      flex-basis: 5rem;
-      max-width: 5rem;
-      padding: .5rem 1rem;
-      text-align: center;
-    }
-
-    .flex-item:nth-child(2) {
-      flex-grow: 1;
-      max-width: none;
-      text-align: left;
-    }
-  }
-
-  .btn {
-    display: inline-block;
-    min-width: 10rem;
-    @apply py-2;
-    @apply px-8;
-    @apply bg-blue-500;
-    @apply rounded-md;
+  .flex-item {
+    flex-basis: 5rem;
+    max-width: 5rem;
+    padding: .5rem 1rem;
     text-align: center;
-
-    +.btn {
-      margin-left: 1.5rem;
-    }
   }
 
+  .flex-item:nth-child(2) {
+    flex-grow: 1;
+    max-width: none;
+    text-align: left;
+  }
+}
 </style>
