@@ -2,13 +2,13 @@
   <div class="containe">
     <h1 class="h1">Details</h1>
     <p>
-      Lodgement of a proxy appointment by a securityholder does not prevent that securityholder from attending the
-      Annual General Meeting. Therefore, if after lodging the proxy appointment the securityholder decides to attend the
-      Annual General Meeting, while the securityholder is present in the meeting the authority of the appointed proxy to
-      speak and vote on the securityholder's behalf, is suspended.
+      Lodgement of a proxy appointment by a {{ meeting.holderDesc }} does not prevent that {{ meeting.holderDesc }} from attending the
+      {{ meeting.description }}. Therefore, if after lodging the proxy appointment the {{ meeting.holderDesc }} decides to attend the
+      {{ meeting.description }}, while the {{ meeting.holderDesc }} is present in the meeting the authority of the appointed proxy to
+      speak and vote on the {{ meeting.holderDesc }}'s behalf, is suspended.
     </p>
     <p>
-      Your name and address details below are as they appear on the register of {{ issuerName }}.
+      Your name and address details below are as they appear on the register of {{ meeting.issuer }}.
     </p>
     <div class="py-6 pl-20">
       {{ investorId }}
@@ -19,7 +19,7 @@
     <h2 class="h4">Acknowledgement</h2>
     <label class="checkbox">
       <input type="checkbox">
-      By ticking this box I/we agree that I/we am/are the securityholder(s) named above.
+      By ticking this box I/we agree that I/we am/are the {{ meeting.holderDesc }}(s) named above.
     </label>
     <p class="footnote pl-4 relative">
       If lodged by an attorney or agent, the attorney or agent warrants they have lodged evidence of their authority
@@ -46,7 +46,11 @@ export default {
       regoDetails: state => state.regoDetails
     }),
     ...mapState('meeting', {
-      issuerName: state => state.issuerName
+      meeting: state => ({
+        holderDesc: state.holderDescription,
+        issuer: state.issuerName,
+        description: state.description
+      })
     })
   }
 }
