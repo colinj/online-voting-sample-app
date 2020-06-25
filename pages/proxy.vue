@@ -21,7 +21,7 @@
       or failing the person named above, the Chair of the Meeting, as my/our proxy to vote on my/our behalf in accordance with the following instructions at the Annual General Meeting to be held at Sheraton on the Park, The Macquarie Room, Level 5, 161 Elizabeth St, Sydney NSW 2000 on Tuesday 12 October 2021 at 10:00 AM (Sydney time) and at any adjournment of that Meeting.
     </p>
     <div class="p-6 flex justify-center">
-      <nuxt-link class="btn" to="/proxy">Previous</nuxt-link>
+      <nuxt-link class="btn" to="/voter">Previous</nuxt-link>
       <nuxt-link class="btn" to="/vote">Next</nuxt-link>
     </div>
   </div>
