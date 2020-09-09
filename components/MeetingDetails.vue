@@ -3,9 +3,9 @@
     <dl>
       <h3 class="h4">Meeting Details</h3>
       <dt>Ballot Opening</dt>
-      <dd>{{ new Date(meeting.openingDateUTC).toLocaleDateString() }}<br>Saturday, 1 June 2019 10:00 AM (Sydney time)</dd>
+      <dd>{{ formatDate(meeting.openingDateUTC) }}</dd>
       <dt>Ballot Closing</dt>
-      <dd>{{ meeting.closingDateUTC }}<br>Sunday, 10 October 2021 10:00 AM (Sydney time)</dd>
+      <dd>{{ formatDate(meeting.closingDateUTC) }}</dd>
       <dt>Location</dt>
       <dd>
         <strong>{{ meeting.addressLine1 }}</strong><br>
@@ -23,6 +23,8 @@
 </template>
 
 <script>
+import format from 'date-fns/format'
+
 export default {
   name: 'MeetingDetails',
   props: {
@@ -30,6 +32,11 @@ export default {
       type: Object,
       default: () => {},
     },
+  },
+  methods: {
+    formatDate (date) {
+      return date ? format(new Date(date), 'EEEE, d MMMM yyyy hh:mm a') : ''
+    }
   },
 }
 </script>

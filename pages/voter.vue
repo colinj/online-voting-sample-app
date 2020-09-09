@@ -46,9 +46,11 @@ export default {
     ...mapActions('voter', ['getVoter']),
     ...mapActions('meeting', ['getMeeting']),
   },
-  created () {
-    this.getVoter(1)
-    this.getMeeting(2482)
+  async created () {
+    await Promise.all([
+      this.getVoter(1),
+      this.getMeeting(2482)
+    ])
   }
 }
 
