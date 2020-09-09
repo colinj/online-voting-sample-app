@@ -18,7 +18,7 @@
             <nuxt />
           </div>
           <aside class="flex-item">
-            <meeting-details />
+            <meeting-details :meeting="meeting"/>
           </aside>
         </div>
       </div>
@@ -38,6 +38,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import SvgSprites from '@/components/SvgSprites'
 import MeetingDetails from '@/components/MeetingDetails'
 
@@ -45,7 +46,10 @@ export default {
   components: {
     SvgSprites,
     MeetingDetails
-  }
+  },
+  computed: {
+    ...mapState('meeting', ['meeting']),
+  },
 }
 </script>
 <style lang="scss" scoped>

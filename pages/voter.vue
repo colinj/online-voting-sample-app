@@ -11,8 +11,8 @@
       Your name and address details below are as they appear on the register of {{ meeting.issuer }}.
     </p>
     <div class="py-6 pl-20">
-      {{ investorId }}
-      <template v-for="line in regoDetails">
+      {{ voter.investorId }}
+      <template v-for="line in voter.regoDetails">
         <br :key="line">{{ line }}
       </template>
     </div>
@@ -35,23 +35,20 @@
 </template>
 
 <script>
-import {
-  mapState
-} from 'vuex'
+import { mapState, mapActions } from 'vuex'
 
 export default {
   computed: {
-    ...mapState('voter', {
-      investorId: state => state.investorId,
-      regoDetails: state => state.regoDetails
-    }),
-    ...mapState('meeting', {
-      meeting: state => ({
-        holderDesc: state.holderDescription,
-        issuer: state.issuerName,
-        description: state.description
-      })
-    })
+    ...mapState('voter', ['voter']),
+    ...mapState('meeting', ['meeting']),
+  },
+  methods: {
+    ...mapActions('voter', ['getVoter']),
+    ...mapActions('meeting', ['getMeeting']),
+  },
+  created () {
+    this.getVoter(1)
+    this.getMeeting(2482)
   }
 }
 

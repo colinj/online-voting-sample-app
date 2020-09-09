@@ -1,5 +1,16 @@
+import api from '@/api'
+
 export const state = () => ({
-  investorId: 'S00040204639',
-  totalVotes: 46000,
-  regoDetails: ['MR BARRY SMITH', '123 ANYWHERE STREET', 'SYDNEY', 'NSW 2000', 'AUSTRALIA']
+  voter: {},
 })
+
+export const mutations = {
+  UPDATE_VOTER: (state, voter) => { state.voter = voter },
+}
+
+export const actions = {
+  async getVoter ({ commit }, id) {
+    const response = await api.voters.get(id)
+    commit('UPDATE_VOTER', response.data)
+  }
+}

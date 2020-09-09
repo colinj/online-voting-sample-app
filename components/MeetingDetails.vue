@@ -3,15 +3,15 @@
     <dl>
       <h3 class="h4">Meeting Details</h3>
       <dt>Ballot Opening</dt>
-      <dd>Saturday, 1 June 2019 10:00 AM (Sydney time)</dd>
+      <dd>{{ new Date(meeting.openingDateUTC).toLocaleDateString() }}<br>Saturday, 1 June 2019 10:00 AM (Sydney time)</dd>
       <dt>Ballot Closing</dt>
-      <dd>Sunday, 10 October 2021 10:00 AM (Sydney time)</dd>
+      <dd>{{ meeting.closingDateUTC }}<br>Sunday, 10 October 2021 10:00 AM (Sydney time)</dd>
       <dt>Location</dt>
       <dd>
-        <strong>Sheraton on the Park</strong><br>
-        The Macquarie Room<br>
-        Level 5, 161 Elizabeth St<br>
-        Sydney NSW 2000
+        <strong>{{ meeting.addressLine1 }}</strong><br>
+        {{ meeting.addressLine2 }}<br>
+        {{ meeting.addressLine3 }}<br>
+        {{ meeting.city }} {{ meeting.state }} {{ meeting.postcode }}
       </dd>
     </dl>
     <dl>
@@ -24,7 +24,13 @@
 
 <script>
 export default {
-
+  name: 'MeetingDetails',
+  props: {
+    meeting: {
+      type: Object,
+      default: () => {},
+    },
+  },
 }
 </script>
 
